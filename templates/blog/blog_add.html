@@ -6,6 +6,30 @@
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         <div class="panel panel-default">
             <h2 class="sub-header">博客管理-添加</h2>
+            <div style="margin-left: 10px">
+                <form action="{% url "blog:blogadd" %}" method="post">
+                    {% csrf_token %}
+                    <p>
+                        <label for="id_title">title:</label>
+                        <input type="text" id="id_title" name="titled" class="form-control" maxlength="300px" style="width: 530px">
+                    </p>
+                    <p>
+                        <label for="id_author">author:</label>
+                        <input type="text" id="id_author" name="author" class="form-control" maxlength="300px" style="width: 530px">
+                    </p>
+                    <p>
+                        <label for="id_body">body:</label>
+                        <textarea name="body" id="id_body" cols="30" rows="10" class="form-control" maxlength="300px" style="width: 530px"></textarea>
+{#                        <input type="text" id="id_author" name="titled" class="form-control" maxlength="300px" style="width: 530px">#}
+                    </p>
+{#                    <p>#}
+{#                        <label for="id_date">date_time: </label>#}
+{#                        <input name="date" type="datetime-local" id="id_date" class="form-control" maxlength="100px" style="width: 200px">#}
+{#                    </p>#}
+                    <input type="submit" value="提交">
+                </form>
+            </div>
         </div>
     </div>
+
 {% endblock %}

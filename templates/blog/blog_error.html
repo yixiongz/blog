@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+
+{% block title %} blog {% endblock %}
+
+{% block context %}
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div class="panel panel-default">
+            <h2 class="sub-header">博客管理-添加</h2>
+            <div style="margin-left: 10px">
+                <h3>添加失败</h3>
+                <h4>确定返回主页，返回继续添加</h4>
+                <a href="{% url 'blog:index' %}"><div class="btn btn-primary btn-lg">确定</div></a>
+                <a href="{% url 'blog:blogadd' %}"><div class="btn btn-success btn-lg">返回</div></a>
+
+            </div>
+
+
+        </div>
+    </div>
+
+{% endblock %}

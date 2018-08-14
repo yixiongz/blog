@@ -8,4 +8,5 @@ from blog import views
 urlpatterns = [
     path('index/', views.index, name="index"),
     path('blog_add/', views.blog_add, name="blogadd"),
+    path('blog_del/', views.blog_del, name="blogdel"),
 ]
