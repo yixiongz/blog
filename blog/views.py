@@ -5,7 +5,7 @@ from django.db.models import Max
 
 def index(request):
     all_list = Bloginfo.objects.all()
-    return render(request, "blog/blogs.html", {"all_list":all_list})
+    return render(request, "blog/blogs_index.html", {"all_list":all_list})
 
 
 def blog_add(request):
