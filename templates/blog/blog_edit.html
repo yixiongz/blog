@@ -1,0 +1,30 @@
+{% extends 'blog/base.html' %}
+
+{% block title %} blog {% endblock %}
+
+{% block context %}
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div class="panel panel-default">
+            <h2 class="sub-header">博客管理-编辑</h2>
+            <div style="margin-left: 10px">
+                <form action="/blog/blog_edit/{{ bloginfo.id }}/" method="post">
+                    {% csrf_token %}
+                    <p>
+                        <label for="id_title">title:</label>
+                        <input type="text" id="id_title" name="titled" class="form-control" maxlength="300px" style="width: 530px" value="{{ bloginfo.title }}">
+                    </p>
+                    <p>
+                        <label for="id_author">author:</label>
+                        <input type="text" id="id_author" name="author" class="form-control" maxlength="300px" style="width: 530px" value="{{ bloginfo.author }}">
+                    </p>
+                    <p>
+                        <label for="id_body">body:</label>
+                        <textarea name="body" id="id_body" cols="30" rows="10" class="form-control" maxlength="300px" style="width: 530px"  >{{ bloginfo.body }}</textarea>
+                    </p>
+                    <input type="submit" value="发布" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

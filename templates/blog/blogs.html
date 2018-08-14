@@ -25,7 +25,8 @@
                             <td>{{ all.author }}</td>
                             <td>{{ all.date|date:"Y-m-d f:s" }}</td>
                             <td>
-                                <a class="btn btn-danger" href="#">
+{#                                <a class="btn btn-danger" href="/blog/blog_edit/?id={{ all.id }}">#}
+                                <a class="btn btn-danger" href="/blog/blog_edit/{{ all.id }}">
                                     <i class="fas fa-user-edit"></i> 编辑
                                 </a>
 

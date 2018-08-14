@@ -10,7 +10,7 @@
                 <h3>添加失败</h3>
                 <h4>确定返回主页，返回继续添加</h4>
                 <a href="{% url 'blog:index' %}"><div class="btn btn-primary btn-lg">确定</div></a>
-                <a href="{% url 'blog:blogadd' %}"><div class="btn btn-success btn-lg">返回</div></a>
+                <a href="/blog/blog_edit/{{ bloginfo.id }}/"><div class="btn btn-success btn-lg">返回</div></a>
             </div>
         </div>
     </div>
