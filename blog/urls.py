@@ -7,4 +7,5 @@ from blog import views
 
 urlpatterns = [
     path('index/', views.index, name="index"),
+    path('blog_add/', views.blog_add, name="blogadd"),
 ]
