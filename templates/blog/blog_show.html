@@ -1,0 +1,24 @@
+{% extends 'base/base.html' %}
+
+{% block title %} blog {% endblock %}
+
+{% block context %}
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div class="panel panel-default">
+                <div style="margin-left: 10px">
+                    <div class="container">
+                        <div class="col-md-offset-5">
+                            <h3>{{ bloginfo.title }}</h3>
+                        </div>
+                        <div class="col-md-offset-4">
+                            <h4 style="display: inline-block;">作者： {{ bloginfo.author }}</h4> &emsp;&emsp;
+                            <h4 style="display: inline-block;">时间： {{ bloginfo.date|date:"Y-m-d f-s" }}</h4>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 style="text-indent: 2em">{{ bloginfo.body }}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
